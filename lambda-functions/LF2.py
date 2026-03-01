@@ -56,7 +56,7 @@ def lambda_handler(event, context):
         "size": 10, # Get 10 potential matches
         "query": {
             "match": {
-                "Cuisine": cuisine # 'Cuisine' is usually capitalized in the OpenSearch index
+                "Cuisine": cuisine
             }
         }
     }
@@ -119,3 +119,4 @@ def lambda_handler(event, context):
         'body': json.dumps('Execution complete')
 
     }
+
