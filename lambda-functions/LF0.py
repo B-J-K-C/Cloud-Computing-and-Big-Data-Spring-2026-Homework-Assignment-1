@@ -32,9 +32,8 @@ def lambda_handler(event, context):
     # 4. CONNECT TO LEX V2
     client = boto3.client('lexv2-runtime')
     
-    # --- IMPORTANT: Double check these IDs in Lex Console ---
-    BOT_ID = 'BT4JPDFKXU'      # Use your actual Bot ID
-    ALIAS_ID = 'TSTALIASID'    # Use your actual Alias ID
+    BOT_ID = 'BT4JPDFKXU'
+    ALIAS_ID = 'TSTALIASID'
     
     try:
         response = client.recognize_text(
@@ -73,4 +72,5 @@ def lambda_handler(event, context):
         return {
             'statusCode': 500,
             'body': json.dumps({'error': str(e)})
+
         }
