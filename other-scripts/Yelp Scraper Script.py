@@ -7,7 +7,7 @@ from opensearchpy import OpenSearch, RequestsHttpConnection, AWSV4SignerAuth
 
 # --- CONFIGURATION ---
 YELP_API_KEY = 'II3x41I8PA7CineIvomA5KHeQyqeJ3HEZIoREDaG-SV0oKF605Ol1EfGwhfMKs_xFGrGllx_jONBtzdY0lWElF_38LU62_I-N3WkJ0OxuQ_fNnPUkhrBrUm0bSCjaXYx'
-OS_HOST = 'search-restaurant-msayj6s5odaq67ufsmfdejpcuq.aos.us-east-1.on.aws' # e.g., search-xxx.us-east-1.es.amazonaws.com
+OS_HOST = 'search-restaurant-msayj6s5odaq67ufsmfdejpcuq.aos.us-east-1.on.aws'
 REGION = 'us-east-1'
 CUISINES = ['Italian', 'Japanese', 'Mexican', 'Chinese', 'Indian']
 
@@ -106,4 +106,5 @@ def scrape_yelp():
     print("All scraping completed successfully!")
 
 if __name__ == "__main__":
+
     scrape_yelp()
