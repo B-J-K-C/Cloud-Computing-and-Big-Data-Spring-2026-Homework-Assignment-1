@@ -3,7 +3,7 @@ import json
 import random
 from opensearchpy import OpenSearch, RequestsHttpConnection, AWSV4SignerAuth
 
-# --- CONFIGURATION (UPDATE THESE) ---
+# --- CONFIGURATION ---
 REGION = 'us-east-1'
 OS_HOST = 'search-restaurant-msayj6s5odaq67ufsmfdejpcuq.aos.us-east-1.on.aws'
 SQS_QUEUE_URL = 'https://sqs.us-east-1.amazonaws.com/377100338169/MyQueue'
@@ -117,4 +117,5 @@ def lambda_handler(event, context):
     return {
         'statusCode': 200,
         'body': json.dumps('Execution complete')
+
     }
